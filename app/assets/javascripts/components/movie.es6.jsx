@@ -1,21 +1,22 @@
 class Movie extends React.Component {
   render() {
+    let { movie_poster, title, year, rating, genre, director, writer, actors, imdbRating } = this.props.data
     return(
       <section className="movieResult">
         <div className="movieImg">
-          <img src="http://ia.media-imdb.com/images/M/MV5BNTQ3OTkwNTgyN15BMl5BanBnXkFtZTcwNTAzOTAzOQ@@._V1_SX300.jpg"/>
-          <p>
-            <span className="title">Title</span>
-            <span className="year">Year</span>
-            <span className="rating">Rating</span>
-            <span className="genre">Genre</span>
-            <span className="director">Director</span>
-          </p>
-          <p>
-            <span className="writer">Writer</span>
-            <span className="Actors">Actors</span>
-            <span className="imdb_rating">IMDB Rating</span>
-          </p>
+          <img className="movie_poster"  src={movie_poster}/>
+          <div className="movieTopInfo">
+            <p className="title">{title}</p>
+            <p className="year">{year}</p>
+            <p className="rating">{rating}</p>
+            <p className="genre">{genre}</p>
+            <p className="director">{director}</p>
+          </div>
+          <div className="actorTopInfo">
+            <p className="writer">{writer}</p>
+            <p className="Actors">{actors}</p>
+            <p className="imdbRating">{imdbRating}</p>
+          </div>
         </div>
       </section>
     )
