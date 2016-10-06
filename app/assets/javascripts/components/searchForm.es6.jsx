@@ -48,7 +48,8 @@ class SearchForm extends React.Component {
         this.props.onSearchResults(response)
       }  else {
         var error = {
-          Title: this.state.title+ " does not exist."
+          Title: this.state.title+ " does not exist.",
+          Poster: "https://s-media-cache-ak0.pinimg.com/236x/77/15/e7/7715e7ea54a010649d68b3a7198a8920.jpg"
         }
         this.props.onSearchResults(error)
       }
